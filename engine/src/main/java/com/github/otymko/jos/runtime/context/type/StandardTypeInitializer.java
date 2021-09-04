@@ -8,6 +8,10 @@ package com.github.otymko.jos.runtime.context.type;
 import com.github.otymko.jos.runtime.context.type.collection.V8Array;
 import com.github.otymko.jos.runtime.context.type.collection.V8KeyAndValue;
 import com.github.otymko.jos.runtime.context.type.collection.V8Structure;
+import com.github.otymko.jos.runtime.context.type.collection.valuetable.ValueTable;
+import com.github.otymko.jos.runtime.context.type.collection.valuetable.ValueTableColumn;
+import com.github.otymko.jos.runtime.context.type.collection.valuetable.ValueTableColumnCollection;
+import com.github.otymko.jos.runtime.context.type.collection.valuetable.ValueTableRow;
 import com.github.otymko.jos.runtime.context.type.primitive.BooleanValue;
 import com.github.otymko.jos.runtime.context.type.primitive.DateValue;
 import com.github.otymko.jos.runtime.context.type.primitive.NullValue;
@@ -60,6 +64,11 @@ public class StandardTypeInitializer {
     implementTypeByInfo(typeManager, V8Array.INFO);
     implementTypeByInfo(typeManager, V8KeyAndValue.INFO);
     implementTypeByInfo(typeManager, V8Structure.INFO);
+
+    implementTypeByInfo(typeManager, ValueTableColumn.INFO);
+    implementTypeByInfo(typeManager, ValueTableColumnCollection.INFO);
+    implementTypeByInfo(typeManager, ValueTableRow.INFO);
+    implementTypeByInfo(typeManager, ValueTable.INFO);
   }
 
   private void initSystemEnumerations(TypeManager typeManager) {
